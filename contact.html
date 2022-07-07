@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0d50fae9e7.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        *{padding: 0%;
+            margin: 0%;
+
+        }
+        nav {
+display: flex;
+flex-direction: row;
+padding: 0 23px;
+background-color: black;
+}
+#myLinks{
+    display: flex;
+}
+nav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+nav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+nav a:hover {
+  background-color: #ddd;
+  color: black; 
+  border-radius: 6px;
+}
+.item {
+padding: 3px 8px;
+list-style: none;
+}
+.item a {
+            color: white;
+            text-decoration: none;
+            padding: 18px 10px;
+            display: block;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Baloo Thambi 2', cursive;
+        }
+@media only screen and (max-width: 742px){
+            #myLinks{
+                flex-direction: column;
+            }
+            nav{
+                display: flex;
+                flex-direction: column;
+                transition: all 0.7s ease-out;
+                background-color: black;
+                text-align: center;
+            }}
+        body{
+    background:  url("../static/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        input{
+            width: 40%;
+            padding: 8px;
+            margin: 30px;
+            border: 2px black solid;
+            border-radius: 10px;
+        }
+        .btn{
+            color: black;
+        }
+        h1{
+            font-size: 40px;
+            color: white;
+            margin: 22px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar ">
+        <div id="myLinks">
+            <li class="item" ><a href="home">Home</a></li>
+            <li class="item" ><a href="#">About</a></li>
+            <li class="item" ><a href="#">MHFW Website</a></li>
+            <li class="item" ><a href="#">Hospitals</a></li>
+            <li class="item" ><a href="contact">Contact Us</a></li>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+        </nav>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <input type="text" class="name" placeholder="Enter your name">
+        <input type="email" class="email" placeholder="Enter your email">
+        <input type="number" class="number" placeholder="Enter your phone number">
+        <button class="btn">Submit</button>
+    </div>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myLinks");
+          if (x.style.display === "flex") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "flex";
+           
+          }
+        }
+        </script>
+</body>
+</html>
